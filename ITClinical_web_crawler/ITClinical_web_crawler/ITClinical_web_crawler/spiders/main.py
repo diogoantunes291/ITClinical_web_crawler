@@ -29,8 +29,7 @@ class ITClinicalCrawler(scrapy.Spider):
 
         if title:
             title = title.strip()
-            features = response.xpath(
-                '//div[@class="container"]//h3[@class="margin-reset"]/following-sibling::ul/li/text()').getall()
+            features = response.xpath('//div[@class="container"]//h3[@class="margin-reset"]/following-sibling::ul/li/text()').getall()
         else:
             print("Page not found")
 
